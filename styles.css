@@ -12,7 +12,7 @@ body {
   background: #f4f7f6;
 }
 
-/* Header styling */
+/* Header styling - only for navigation now */
 header {
   position: fixed;
   top: 0;
@@ -22,17 +22,11 @@ header {
   z-index: 1000;
 }
 
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Navigation inside header */
+header nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px;
-}
-
-.logo h1 {
-  font-size: 1.5em;
 }
 
 nav ul {
@@ -55,9 +49,33 @@ nav ul li a:hover {
   color: #007BFF;
 }
 
+/* Profile Information Section (moved out of header) */
+.profile-info {
+  max-width: 1200px;
+  margin: 100px auto 20px; /* Top margin to clear the fixed header */
+  text-align: center;
+}
+
+.profile-info .profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.profile-info h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 1em;
+}
+
 /* Main content styling */
 main {
-  padding: 100px 20px 50px; /* Top padding to account for the fixed header */
+  padding: 20px 20px 50px; /* Reduced top padding since profile-info is now above main */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -191,7 +209,6 @@ footer {
 .tab-content.active {
   display: block;
 }
-
 
 /* Cards Container and Card Styles */
 .cards-container {
