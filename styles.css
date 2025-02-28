@@ -22,16 +22,17 @@ header {
   z-index: 1000;
 }
 
-/* Navigation inside header */
 header nav {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px 20px;
 }
 
+/* Right-align navigation items */
 nav ul {
   list-style: none;
   display: flex;
+  justify-content: flex-end;
 }
 
 nav ul li {
@@ -52,7 +53,8 @@ nav ul li a:hover {
 /* Profile Information Section (moved out of header) */
 .profile-info {
   max-width: 1200px;
-  margin: 100px auto 20px; /* Top margin to clear the fixed header */
+  margin: 120px auto 20px; /* Increased top margin to ensure header does not overlap */
+  padding: 0 20px; /* Added horizontal padding */
   text-align: center;
 }
 
